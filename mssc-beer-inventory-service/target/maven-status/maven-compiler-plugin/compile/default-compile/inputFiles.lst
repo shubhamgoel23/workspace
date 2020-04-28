@@ -1,0 +1,16 @@
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\web\mappers\BeerInventoryMapper.java
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\BeerInventoryApplication.java
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\domain\BaseEntity.java
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\web\model\BeerInventoryDto.java
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\repositories\BeerInventoryRepository.java
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\com\spring\common\model\BeerStyleEnum.java
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\com\spring\common\model\BeerDto.java
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\com\spring\common\events\BeerEvent.java
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\domain\BeerInventory.java
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\web\mappers\DateMapper.java
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\config\JmsConfig.java
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\bootstrap\BeerInventoryBootstrap.java
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\services\NewInventoryListener.java
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\com\spring\common\events\BrewBeerEvent.java
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\com\spring\common\events\NewInventoryEvent.java
+C:\Users\shubham.goel\Downloads\workspace\mssc-beer-inventory-service\src\main\java\guru\sfg\beer\inventory\service\web\controllers\BeerInventoryController.java

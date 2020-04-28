@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Spring-State-Machine&apos; to &apos;spring-state-machine&apos;" description="Rename resource &apos;Spring-State-Machine&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Spring-State-Machine" name="spring-state-machine" stamp="1579444311098" updateReferences="true"/>
+</session>

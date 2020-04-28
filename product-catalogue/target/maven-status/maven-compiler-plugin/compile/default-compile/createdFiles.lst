@@ -1,0 +1,14 @@
+com\sapient\productcatalogue\web\ProductController.class
+com\sapient\productcatalogue\model\ProductCategoryEnum.class
+com\sapient\productcatalogue\domain\Product$ProductBuilder.class
+com\sapient\productcatalogue\repositories\ProductRepository.class
+com\sapient\productcatalogue\model\ProductDto.class
+com\sapient\productcatalogue\services\ProductService.class
+com\sapient\productcatalogue\domain\Product.class
+com\sapient\productcatalogue\model\ProductDto$ProductDtoBuilder.class
+com\sapient\productcatalogue\model\ProductSizeEnum.class
+com\sapient\productcatalogue\model\ProductColorEnum.class
+com\sapient\productcatalogue\services\ProductServiceImpl.class
+com\sapient\productcatalogue\ProductCatalogueApplication.class
+com\sapient\productcatalogue\model\ProductMapper.class
+com\sapient\productcatalogue\model\ProductPagedList.class

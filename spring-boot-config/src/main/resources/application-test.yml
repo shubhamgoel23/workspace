@@ -1,0 +1,10 @@
+my.greeting: hello
+
+app.description: "${app.name:defaultValue}"
+
+my.list: "one,two,four"
+
+number: 5
+db.values: "{connection.string:'http//', username:'foo', password:'pass'}"
+
+management.endpoints.web.exposure.include: "*"

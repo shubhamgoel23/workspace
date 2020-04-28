@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NewInventoryListener.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">SFG Brewery Monolith UI</a> &gt; <a href="index.source.html" class="el_package">guru.sfg.brewery.listeners</a> &gt; <span class="el_source">NewInventoryListener.java</span></div><h1>NewInventoryListener.java</h1><pre class="source lang-java linenums">package guru.sfg.brewery.listeners;
+
+import guru.sfg.brewery.domain.BeerOrder;
+import guru.sfg.brewery.domain.OrderStatusEnum;
+import guru.sfg.brewery.events.NewBeerOrderEvent;
+import guru.sfg.brewery.events.NewInventoryEvent;
+import guru.sfg.brewery.repositories.BeerOrderRepository;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.event.EventListener;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Component;
+
+import javax.transaction.Transactional;
+import java.util.List;
+
+<span class="fc" id="L17">@Slf4j</span>
+@Component
+public class NewInventoryListener {
+
+    private final BeerOrderRepository beerOrderRepository;
+    private final ApplicationEventPublisher publisher;
+
+    public NewInventoryListener(BeerOrderRepository beerOrderRepository,
+<span class="fc" id="L25">                                ApplicationEventPublisher publisher) {</span>
+<span class="fc" id="L26">        this.beerOrderRepository = beerOrderRepository;</span>
+<span class="fc" id="L27">        this.publisher = publisher;</span>
+<span class="fc" id="L28">    }</span>
+
+    @Async
+    @EventListener
+    @Transactional
+    public void listen(NewInventoryEvent event){
+<span class="nc" id="L34">        List&lt;BeerOrder&gt; newOrders = beerOrderRepository.findAllByOrderStatus(OrderStatusEnum.NEW);</span>
+<span class="nc" id="L35">        List&lt;BeerOrder&gt; readyOrders = beerOrderRepository.findAllByOrderStatus(OrderStatusEnum.READY);</span>
+
+<span class="nc" id="L37">        log.debug(&quot;NEW Orders: &quot; + newOrders.size());</span>
+<span class="nc" id="L38">        log.debug(&quot;READY Orders: &quot; + readyOrders.size());</span>
+
+<span class="nc" id="L40">        newOrders.forEach(beerOrder -&gt; {</span>
+<span class="nc" id="L41">            log.debug(&quot;Republishing New Order Event for New Inventory. BeerOrder - &quot; + beerOrder.getId());</span>
+<span class="nc" id="L42">            publisher.publishEvent(new NewBeerOrderEvent(beerOrder));</span>
+<span class="nc" id="L43">        });</span>
+
+<span class="nc" id="L45">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>
